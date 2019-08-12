@@ -23,6 +23,7 @@ export class NavComponent implements OnInit {
   login() {
     this.authService.login(this.model).subscribe(
       () => {
+        this.username = this.authService.decodedToken.unique_name;
         this.alertify.success('Logged in successfully');
       }, error => {
         this.alertify.error(error);
