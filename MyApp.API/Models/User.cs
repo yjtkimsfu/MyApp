@@ -26,7 +26,7 @@ namespace MyApp.API.Models
         public string State { get; set; }
         public byte Zipcode { get; set; }
         public string Country { get; set; }
-        public int PhoneNumbers { get; set; }
+        public int PhoneNumber { get; set; }
         public string email { get; set; }
         public ICollection<Photo> Photos { get; set; }
     }

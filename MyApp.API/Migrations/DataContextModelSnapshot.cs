@@ -67,7 +67,7 @@ namespace MyApp.API.Migrations
 
                     b.Property<byte[]>("PasswordSalt");
 
-                    b.Property<int>("PhoneNumbers");
+                    b.Property<int>("PhoneNumber");
 
                     b.Property<string>("State");
 

@@ -62,7 +62,7 @@ namespace MyApp.API.Migrations
                 nullable: true);
 
             migrationBuilder.AddColumn<int>(
-                name: "PhoneNumbers",
+                name: "PhoneNumber",
                 table: "Users",
                 nullable: false,
                 defaultValue: 0);
@@ -158,7 +158,7 @@ namespace MyApp.API.Migrations
                 table: "Users");
 
             migrationBuilder.DropColumn(
-                name: "PhoneNumbers",
+                name: "PhoneNumber",
                 table: "Users");
 
             migrationBuilder.DropColumn(
