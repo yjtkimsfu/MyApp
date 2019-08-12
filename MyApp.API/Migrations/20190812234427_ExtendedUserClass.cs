@@ -29,11 +29,10 @@ namespace MyApp.API.Migrations
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
-            migrationBuilder.AddColumn<int>(
+            migrationBuilder.AddColumn<string>(
                 name: "Gender",
                 table: "Users",
-                nullable: false,
-                defaultValue: 0);
+                nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "Interests",
@@ -72,11 +71,11 @@ namespace MyApp.API.Migrations
                 table: "Users",
                 nullable: true);
 
-            migrationBuilder.AddColumn<byte>(
+            migrationBuilder.AddColumn<int>(
                 name: "Zipcode",
                 table: "Users",
                 nullable: false,
-                defaultValue: (byte)0);
+                defaultValue: 0);
 
             migrationBuilder.AddColumn<string>(
                 name: "email",

@@ -51,7 +51,7 @@ namespace MyApp.API.Migrations
 
                     b.Property<DateTime>("DateOfBirth");
 
-                    b.Property<int>("Gender");
+                    b.Property<string>("Gender");
 
                     b.Property<string>("Interests");
 
@@ -73,7 +73,7 @@ namespace MyApp.API.Migrations
 
                     b.Property<string>("Username");
 
-                    b.Property<byte>("Zipcode");
+                    b.Property<int>("Zipcode");
 
                     b.Property<string>("email");
 
