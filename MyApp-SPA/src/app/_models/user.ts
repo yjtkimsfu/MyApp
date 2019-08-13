@@ -13,10 +13,6 @@ export interface User {
     state: string;
     country: string;
 
-    zipcode?: number;
-    phoneNumber?: number;
-    email?: string;
-
     interests?: string;
     introduction?: string;
     lookingFor?: string;
