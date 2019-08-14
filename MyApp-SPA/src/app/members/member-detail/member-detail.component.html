@@ -9,15 +9,15 @@
         <div class="card-body">
           <div>
             <strong>Location:</strong>
-            <p>{{user.city}} {{user.state}} {{user.country}}</p>
+            <p>{{user.city}}, {{user.state}} {{user.country}}</p>
           </div>
           <div>
             <strong>Last Active:</strong>
-            <p>{{user.lastActive}}</p>
+            <p>{{user.lastActive | date }}</p>
           </div>
           <div>
             <strong>Member Since:</strong>
-            <p>{{user.created}}</p>
+            <p>{{user.created | date }}</p>
           </div>
         </div>
         <div class="card-footer">

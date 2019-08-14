@@ -16,16 +16,20 @@
           <img src="{{user.photoUrl}}" alt="{{user.knownAs}}" class="card-img-top img-thumbnail">
           <div class="card-body">
             <div>
+              <strong>Birth Date:</strong>
+              <p>{{user.dateOfBirth | date }}</p>
+            </div>
+            <div>
               <strong>Location:</strong>
-              <p>{{user.city}} {{user.state}} {{user.country}}</p>
+              <p>{{user.city}}, {{user.state}} {{user.country}}</p>
             </div>
             <div>
               <strong>Last Active:</strong>
-              <p>{{user.lastActive}}</p>
+              <p>{{user.lastActive | date }}</p>
             </div>
             <div>
               <strong>Member Since:</strong>
-              <p>{{user.created}}</p>
+              <p>{{user.created | date }}</p>
             </div>
           </div>
           <div class="card-footer">
@@ -39,28 +43,47 @@
           <tabset class="member-tabset">
             <tab heading="Edit Personal Info">
               <form #editForm="ngForm" id="editProfile" (ngSubmit)="updateProfile()">
-                <div class="form-inline">
-                  <label for="name">Nickname</label>
-                  <input type="text" class="form-control" name="nickname" [(ngModel)]="user.knownAs">
+                <h4>Name:</h4>
+                <div class="form-inline nameTextBox d-flex justify-content-between ">
+                  <label for="firstName">First Name:</label>
+                  <input type="text" class="form-control" name="firstName" [(ngModel)]="user.firstName">
+
+                  <label for="lastName">Last Name:</label>
+                  <input type="text" class="form-control" name="lastName" [(ngModel)]="user.lastName">
+
+                  <label for="knownAs">Nick Name:</label>
+                  <input type="text" class="form-control" name="knownAs" [(ngModel)]="user.knownAs">
                 </div>
                 <hr>
 
                 <h4>Contact: </h4>
-                <div class="form-inline">
-                    <label for="city">Phone Number</label>
-                    <input type="text" class="form-control" name="phoneNumber" [(ngModel)]="user.phoneNumber">
-                    <label for="city">email</label>
-                    <input type="text" class="form-control" name="email" [(ngModel)]="user.email">
+                <div class="form-inline contactTextBox">
+                    <label for="city">Phone Number:</label>
+                    <input type="tel" class="form-control" name="phoneNumber" [(ngModel)]="user.phoneNumber">
+
+                    <label for="city">email:</label>
+                    <input type="email" class="form-control" name="email" [(ngModel)]="user.email">
                 </div>
                 <hr>
 
                 <h4>Location Detail:</h4>
+
                 <div class="form-inline">
-                    <label for="city">City </label>
+                  <label for="address">Address:</label>
+                  <input type="text" class="form-control" name="address" [(ngModel)]="user.address">
+
+                  <label for="zipcode">Zip Code:</label>
+                  <input type="text" class="form-control" name="zipcode" [(ngModel)]="user.zipcode">
+                </div>
+
+                <div class="form-inline">
+                    <label for="city">City:</label>
                     <input type="text" class="form-control" name="city" [(ngModel)]="user.city">
-                    <label for="State">State </label>
+
+                    <label for="State">State:</label>
                     <input type="text" class="form-control" name="state" [(ngModel)]="user.state">
-                    <label for="Country">Country </label>
+
+                    <label for="Country">Country:</label>
                     <input type="text" class="form-control" name="country" [(ngModel)]="user.country">
                 </div>
                 <hr>

@@ -12,6 +12,7 @@ export interface ProfileUser {
     lastActive: Date;
     photoUrl: string;
 
+    address: string;
     city: string;
     state: string;
     country: string;
