@@ -13,6 +13,9 @@ export interface User {
     state: string;
     country: string;
 
+    phoneNumber?: number;
+    email?: string;
+
     interests?: string;
     introduction?: string;
     lookingFor?: string;
