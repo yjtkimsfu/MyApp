@@ -18,11 +18,15 @@ export class UserService {
     return this.http.get<User[]>(this.usersControlUrl);
   }
 
-  getUser(id): Observable<User> {
+  getUser(id: number): Observable<User> {
     return this.http.get<User>(this.usersControlUrl + id);
   }
 
-  getProfile(id): Observable<ProfileUser> {
+  getProfile(id: number): Observable<ProfileUser> {
     return this.http.get<ProfileUser>(this.usersControlUrl + 'profile/' + id);
+  }
+
+  updateUser(id: number, user: ProfileUser) {
+    return this.http.put(this.usersControlUrl + id, user);
   }
 }
