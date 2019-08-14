@@ -9,7 +9,7 @@ using MyApp.API.Data;
 namespace MyApp.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20190812234427_ExtendedUserClass")]
+    [Migration("20190814004150_ExtendedUserClass")]
     partial class ExtendedUserClass
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,6 +45,8 @@ namespace MyApp.API.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Address");
+
                     b.Property<string>("City");
 
                     b.Property<string>("Country");
@@ -52,6 +54,8 @@ namespace MyApp.API.Migrations
                     b.Property<DateTime>("Created");
 
                     b.Property<DateTime>("DateOfBirth");
+
+                    b.Property<string>("FirstName");
 
                     b.Property<string>("Gender");
 
@@ -62,6 +66,8 @@ namespace MyApp.API.Migrations
                     b.Property<string>("KnownAs");
 
                     b.Property<DateTime>("LastActive");
+
+                    b.Property<string>("LastName");
 
                     b.Property<string>("LookingFor");
 
@@ -75,7 +81,7 @@ namespace MyApp.API.Migrations
 
                     b.Property<string>("Username");
 
-                    b.Property<int>("Zipcode");
+                    b.Property<string>("Zipcode");
 
                     b.Property<string>("email");
 

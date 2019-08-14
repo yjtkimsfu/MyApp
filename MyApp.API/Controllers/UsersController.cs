@@ -40,5 +40,15 @@ namespace MyApp.API.Controllers
 
             return Ok(userToReturn);
         }
+
+        [HttpGet("profile/{id}")]
+        public async Task<IActionResult> GetProfile(int id)
+        {
+            var user = await _repo.GetUser(id);
+
+            var userToReturn = _mapper.Map<UserForProfileEditDto>(user);
+
+            return Ok(userToReturn);
+        }
     }
 }

@@ -8,6 +8,11 @@ namespace MyApp.API.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<string>(
+                name: "Address",
+                table: "Users",
+                nullable: true);
+
+            migrationBuilder.AddColumn<string>(
                 name: "City",
                 table: "Users",
                 nullable: true);
@@ -28,6 +33,11 @@ namespace MyApp.API.Migrations
                 table: "Users",
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
+
+            migrationBuilder.AddColumn<string>(
+                name: "FirstName",
+                table: "Users",
+                nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "Gender",
@@ -56,6 +66,11 @@ namespace MyApp.API.Migrations
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<string>(
+                name: "LastName",
+                table: "Users",
+                nullable: true);
+
+            migrationBuilder.AddColumn<string>(
                 name: "LookingFor",
                 table: "Users",
                 nullable: true);
@@ -71,11 +86,10 @@ namespace MyApp.API.Migrations
                 table: "Users",
                 nullable: true);
 
-            migrationBuilder.AddColumn<int>(
+            migrationBuilder.AddColumn<string>(
                 name: "Zipcode",
                 table: "Users",
-                nullable: false,
-                defaultValue: 0);
+                nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "email",
@@ -117,6 +131,10 @@ namespace MyApp.API.Migrations
                 name: "Photos");
 
             migrationBuilder.DropColumn(
+                name: "Address",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
                 name: "City",
                 table: "Users");
 
@@ -130,6 +148,10 @@ namespace MyApp.API.Migrations
 
             migrationBuilder.DropColumn(
                 name: "DateOfBirth",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "FirstName",
                 table: "Users");
 
             migrationBuilder.DropColumn(
@@ -150,6 +172,10 @@ namespace MyApp.API.Migrations
 
             migrationBuilder.DropColumn(
                 name: "LastActive",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "LastName",
                 table: "Users");
 
             migrationBuilder.DropColumn(
