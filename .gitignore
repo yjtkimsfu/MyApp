@@ -1,4 +1,5 @@
 MyApp.API/MyApp.db
 MyApp.API/obj/
 MyApp.API/bin/
+MyApp.API/appsettings.json
 MyApp-SPA/node_modules/
